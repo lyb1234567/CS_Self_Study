@@ -1,3 +1,7 @@
 # CS_Self_Study
-This repository will be used to store some CS courses to learnsds
+本仓库将记录一些CS课程的自学笔记
+
+- Operating System
+- Data Structre and Algorithm
+- Computer Network
 
