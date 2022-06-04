@@ -1,11 +1,10 @@
 # Analysis of Complexity
 This section demonstrates some analysis of some classic algorithm,including the concept of the notation **O** such as **$O(n)$** and  **$O(n^2)$**
 
-## Table of contents
-- [Analysis of Complexity](#analysis-of-complexity)
-  - [Table of contents](#table-of-contents)
-    - [Concept](#concept)
-    - [Comparison](#comparison)
+
+  ## Table of contents
+ - [Concept](#concept)
+ - [Comparison](#comparison)
 
 
 
