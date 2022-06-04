@@ -15,6 +15,7 @@ Let's say we have to functions: $f(n)$ and $g(n)$, where n is the positive integ
 Then, we can say that $f(n)$ is $O(g(n))$. And when we are analying the time complexity of an algorithm, we only focus on the highest order. For example: $f(n)=n^2+2n+3$, then we can say that the time complexity if $n^2$.
 
 Question: Prove that the time complexity of $5n^4+3n^3+2n^2+4n+1$ is $O(n^4)$
+
 ***Proof：*** $$5n^4+3n^3+2n^2+4n+1\le (5+3+2+4+1)n^4=cn^4$$
 
 
@@ -22,4 +23,4 @@ Question: Prove that the time complexity of $5n^4+3n^3+2n^2+4n+1$ is $O(n^4)$
 
 In this section, two classic sorting algortihms: Bubble Sorting and insert Sorting.
 As we can see from the figure below, when n increases, the time taken to finish sorting increase sharply in the bubble sorting Algoritm, where the time complexity is $O(n^2)$, while that for the insert sorting algortihm is $O(n)$ and the worst case is also $O(n^2)$
-![Alt text for broken image link](www.baidu.com)
+![Comparison](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Complexity/image/Comparison.png)
