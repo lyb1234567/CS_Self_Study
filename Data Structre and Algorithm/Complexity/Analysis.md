@@ -5,6 +5,7 @@ This section demonstrates some analysis of some classic algorithm,including the 
   ## Table of contents
  - [Concept](#concept)
  - [Comparison](#comparison)
+ - [Different functions](#Functions)
 
 
 
@@ -21,6 +22,12 @@ Question: Prove that the time complexity of $5n^4+3n^3+2n^2+4n+1$ is $O(n^4)$
 ### Comparison
 
 In this section, two classic sorting algortihms: Bubble Sorting and insert Sorting.
-As we can see from the figure below, when n increases, the time taken to finish sorting increase sharply in the bubble sorting Algoritm, where the time complexity is $O(n^2)$, while that for the insert sorting algortihm is
- 
+As we can see from the figure below, when n increases, the time taken to finish sorting increase sharply in the bubble sorting Algoritm, where the time complexity is $O(n^2)$, while that for the insert sorting algortihm 
+
 ![Comparison](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Comparison.png?raw=true)
+
+
+### Functions
+This section demonstrates the increasing rate of different functions with increasing number of samples. As shwon below, with the number of samples increasing, except that the constant line remains the same, the linear function increases, and the expotential function is the slowest. So, the increasing rate cans be summarized as follows:$$ C<logn<n<nlogn<n^2<n^3<a^n$$
+
+![Experiment](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Complexity/image/Experiement.png?raw=true)
