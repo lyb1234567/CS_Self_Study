@@ -22,4 +22,4 @@ Question: Prove that the time complexity of $5n^4+3n^3+2n^2+4n+1$ is $O(n^4)$
 
 In this section, two classic sorting algortihms: Bubble Sorting and insert Sorting.
 As we can see from the figure below, when n increases, the time taken to finish sorting increase sharply in the bubble sorting Algoritm, where the time complexity is $O(n^2)$, while that for the insert sorting algortihm is $O(n)$ and the worst case is also $O(n^2)$
-![demo](https://github.com/lyb1234567/2048/blob/master/demo.PNG)
+[![An old rock in the desert](/assets/images/shiprock.jpg "Shiprock, New Mexico by Beau Rogers")](https://www.flickr.com/photos/beaurogers/31833779864/in/photolist-Qv3rFw-34mt9F-a9Cmfy-5Ha3Zi-9msKdv-o3hgjr-hWpUte-4WMsJ1-KUQ8N-deshUb-vssBD-6CQci6-8AFCiD-zsJWT-nNfsgB-dPDwZJ-bn9JGn-5HtSXY-6CUhAL-a4UTXB-ugPum-KUPSo-fBLNm-6CUmpy-4WMsc9-8a7D3T-83KJev-6CQ2bK-nNusHJ-a78rQH-nw3NvT-7aq2qf-8wwBso-3nNceh-ugSKP-4mh4kh-bbeeqH-a7biME-q3PtTf-brFpgb-cg38zw-bXMZc-nJPELD-f58Lmo-bXMYG-bz8AAi-bxNtNT-bXMYi-bXMY6-bXMYv)
