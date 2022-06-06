@@ -2,10 +2,9 @@
 This section demonstrates some content of python list, including the concept of shallow copy and deep copy with some corresponding codes.
 
 ## Table of content
-- [Table of content](#table-of-content)
-  - [Copy](#copy)
   - [Shallow copy](#shallow-copy)
   - [Deep Copy](#deep-copy)
+  - [compact array]()
 
 
 ### Copy
