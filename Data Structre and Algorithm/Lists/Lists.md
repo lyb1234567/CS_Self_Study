@@ -5,7 +5,8 @@ This section demonstrates some content of python list, including the concept of 
 ## Table of content
   - [Shallow copy](#shallow-copy)
   - [Deep Copy](#deep-copy)
-  - [compact array]()
+  - [Compact Array](#compact-array)
+  - [Dynamic Array](#dynamic-array)
 
 
 ### Copy
@@ -42,6 +43,8 @@ Essentially, sometimes you may want to have the original values unchanged and on
     - [Copy](#copy)
     - [Shallow copy](#shallow-copy)
     - [Deep Copy](#deep-copy)
+    - [Compact array](#compact-array)
+    - [Dynamic array](#dynamic-array)
 
 In python, we have two methods for shallow copy and deep copy:
 
@@ -132,3 +135,40 @@ Old list: [[1, 1, 1], ['BB', 2, 2], [3, 3, 3]]
 New list: [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
 ```
 As we can see here, with the change of the elements of the original list, the new list doesn't change at all, since they do not share the sam reference
+
+
+### Compact array
+
+Strings are represented using an array of characters:
+```python
+str=['s','a','m','p','l','e']
+```
+We will refer to this more direct representation as a compact array
+because the array is storing the bits that represent the primary data
+(**characters, in the case of strings**).
+
+Compact arrays have several advantages over referential structures in
+terms of computing performance.
+- overall memory usage will be much lower
+- the primary data are stored consecutively in memory
+
+### Dynamic array
+
+In python, the size of the created list is usually bigger than that of the user's required list. For example: if a user calls an array of 5 elements, the system might initialize an array which can store 8 element.
+
+**Experiment**
+```python
+import sys
+data=[]
+for k in range(n):
+  a=len(data)
+  b=sys.getsizeof(data)
+  print('Length: {0:3d}'; Size in bytes:{1:4d}'.format(a,b))
+  data.append(None)
+```
+As we can see here, this experiment explores the relationship between the list length and the bottom size.
+
+Here is the output:
+![image](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Lists/image/%E5%88%97%E8%A1%A8%E9%95%BF%E5%BA%A6%E5%92%8C%E5%BA%95%E5%B1%82%E5%A4%A7%E5%B0%8F%E7%9A%84%E5%85%B3%E7%B3%BB.PNG?raw=true)
+
+As we can see here, when we are increasing the length from 0 to 1, the size in bytes increases as well. As we are working on the 64 bits machine (8 bytes), so it can be predicted that increment of 32 will allocate 4 more objects, which is true according to the result, since the size only changes until the length is bigger and equal to 5. And when the byte size 120, it has been increased by 64 bytes, which means that it allocates 8 refernced objcts, which means that it will not change unitil the length is bigger than and equal to 9, which is true accoding to the result.
