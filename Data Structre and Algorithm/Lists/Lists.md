@@ -1,4 +1,5 @@
-#Lists
+# Lists
+
 This section demonstrates some content of python list, including the concept of shallow copy and deep copy with some corresponding codes.
 
 ## Table of content
@@ -36,10 +37,11 @@ ID of New List: 140673303268168
 As we can see  here, although we already assigned the old list to the new list before chaning the old list, the new list still changes with the change of list, which shows that the list structure in python is **reference**.
 
 Essentially, sometimes you may want to have the original values unchanged and only modify the new values or vice versa. In Python, there are two ways to create copies:
-- [Table of content](#table-of-content)
-  - [Copy](#copy)
-  - [Shallow copy](#shallow-copy)
-  - [Deep Copy](#deep-copy)
+- [Lists](#lists)
+  - [Table of content](#table-of-content)
+    - [Copy](#copy)
+    - [Shallow copy](#shallow-copy)
+    - [Deep Copy](#deep-copy)
 
 In python, we have two methods for shallow copy and deep copy:
 
