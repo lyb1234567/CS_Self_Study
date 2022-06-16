@@ -52,6 +52,10 @@ Essentially, sometimes you may want to have the original values unchanged and on
       - [Remove even integer](#remove-even-integer)
       - [Merge Sorted List](#merge-sorted-list)
       - [Find Two Numbers that Add up to "k"](#find-two-numbers-that-add-up-to-k)
+      - [Product](#product)
+      - [Find Min](#find-min)
+      - [Non Repeating](#non-repeating)
+      - [Second Max](#second-max)
 
 In python, we have two methods for shallow copy and deep copy:
 
@@ -244,17 +248,23 @@ if __name__ == '__main__':
         a.append(i)
 ```
 ### Leetcode Problems
-- [Remove even integer](#remove-even-integer)
-- [Merge sorted lists](#merge-sorted-list)
-- [Find Two Numbers that Add up to "k"](#find-two-numbers-that-add-up-to-"k")
-- List of Products of all Elements
-- Find Minimum Value in List
-- First Non-Repeating Integer in a list
-- Find Second Maximum Value in a List
-- Right Rotate List
-- Rearrange Positive & Negative Values
-- Rearrange Sorted List in Max/Min Form
-- Maximum Sum Sublist
+- [Lists](#lists)
+  - [Table of content](#table-of-content)
+    - [Copy](#copy)
+    - [Shallow copy](#shallow-copy)
+    - [Deep Copy](#deep-copy)
+    - [Compact array](#compact-array)
+    - [Dynamic array](#dynamic-array)
+      - [Experiment](#experiment)
+      - [Implementation of dynamic array](#implementation-of-dynamic-array)
+    - [Leetcode Problems](#leetcode-problems)
+      - [Remove even integer](#remove-even-integer)
+      - [Merge Sorted List](#merge-sorted-list)
+      - [Find Two Numbers that Add up to "k"](#find-two-numbers-that-add-up-to-k)
+      - [Product](#product)
+      - [Find Min](#find-min)
+      - [Non Repeating](#non-repeating)
+      - [Second Max](#second-max)
 
 
 #### Remove even integer
@@ -357,3 +367,72 @@ def find_sum(lst,target):
     return -1
 ```
 Here is the output for comparison:
+![image](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Lists/image/Compasison.PNG?raw=true)
+
+
+#### Product
+
+Use the deep copy to remove the wanted element for each loop and hence the time complexity is: **$O(n^2)$**
+
+```python
+def find_product(lst):
+    temp=[]
+    for i in range(len(lst)):
+        temp_lst=copy.deepcopy(lst)
+        temp_lst.remove(lst[i])
+        temp_remove=temp_lst
+        product=1
+        for j in range(len(temp_remove)):
+            product=product*temp_remove[j]
+        temp.append(product)
+    return temp
+```
+
+#### Find Min
+
+Traverse all the elements, Complexity:**$O(n)$**
+
+```python
+def fin_min(lst):
+    min=lst[0]
+    for i in range(len(lst)):
+        if min>=lst[i]:
+            min=lst[i]
+    return min
+```
+
+#### Non Repeating
+Use the dict and set in python to solve this question and the time complexity is: **$O(n)$**
+```python
+def find_first_unique(lst):
+    dict={}
+    set_lst=set(lst)
+    lst_new=list(set_lst)
+    temp=[]
+    for i in range(len(set_lst)):
+        dict[lst_new[i]]=0
+
+    for i in range(len(lst)):
+        dict[lst[i]]=dict[lst[i]]+1
+
+    for j in range(len(lst)):
+        if dict[lst[j]]==1:
+           return lst[j]
+```
+
+#### Second Max
+```python
+def second_max(lst):
+    first=float("-inf")
+    second=float("-inf")
+    for i in range(len(lst)):
+        if first<=lst[i]:
+            first=lst[i]
+
+    print(first)
+    lst.remove(first)
+    for j in lst:
+        if second<=j:
+            second=j
+    return second
+```
