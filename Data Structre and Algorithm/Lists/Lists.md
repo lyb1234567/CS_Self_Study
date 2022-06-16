@@ -178,6 +178,7 @@ for k in range(n):
 As we can see here, this experiment explores the relationship between the list length and the bottom size.
 
 Here is the output:
+
 ![image](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Lists/image/%E5%88%97%E8%A1%A8%E9%95%BF%E5%BA%A6%E5%92%8C%E5%BA%95%E5%B1%82%E5%A4%A7%E5%B0%8F%E7%9A%84%E5%85%B3%E7%B3%BB.PNG?raw=true)
 
 
