@@ -56,6 +56,8 @@ Essentially, sometimes you may want to have the original values unchanged and on
       - [Find Min](#find-min)
       - [Non Repeating](#non-repeating)
       - [Second Max](#second-max)
+      - [Rearrange](#rearrange)
+      - [Find Max from Sublist](#find-max-from-sublist)
 
 In python, we have two methods for shallow copy and deep copy:
 
@@ -265,6 +267,8 @@ if __name__ == '__main__':
       - [Find Min](#find-min)
       - [Non Repeating](#non-repeating)
       - [Second Max](#second-max)
+      - [Rearrange](#rearrange)
+      - [Find Max from Sublist](#find-max-from-sublist)
 
 
 #### Remove even integer
@@ -435,4 +439,46 @@ def second_max(lst):
         if second<=j:
             second=j
     return second
+```
+#### Rearrange
+ 
+Use two variables to hold the first index and second index.
+Time Complexity: **$O(n)$**
+
+```python
+ temp=[]
+    k=0
+    d=0
+    for i  in range(len(lst)):
+        a = lst[0 + k]
+        b = lst[-1 - d]
+        if i%2==0:
+            temp.append(b)
+            d=d+1
+        elif i%2==1:
+            temp.append(a)
+            k=k+1
+    return temp
+```
+
+#### Find Max from Sublist
+In this question, we use the dynamic programming method. So, we first set two variables of current max and global max. Then for each loop, it will try to check if the current max is positive, if so then it will add the current value of the list to the current max, otherwise, it will assign the current element to it. Then, after the whole loop, it will try to compare the current max with the global max, if the later one is bigger than the former one, ohterwise, it will assign the current max to the gloab max.
+Time Complexity: **$O(n)$**
+
+```python
+def find_max_sublist(lst):
+    temp=[]
+    if len(lst)<1:
+        return -1
+    else:
+        cur_max=lst[0]
+        global_max=lst[0]
+        for i in range(1,len(lst)):
+            if cur_max<0:
+                cur_max=lst[i]
+            else:
+                cur_max=cur_max+lst[i]
+            if global_max<cur_max:
+                global_max=cur_max
+        return global_max
 ```
