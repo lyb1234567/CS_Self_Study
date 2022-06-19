@@ -12,17 +12,18 @@ class DynamicArray:
 
     def __getitem__(self, k):
         if not 0 <= k < self._n:
-            raise IndexError('invalid index')
+            raise IndexError("invalid index")
         return self._A[k]
 
     def __repr__(self):
-        temp=[]
-        for  i in range(self._n):
+        temp = []
+        for i in range(self._n):
             temp.append(self._A[i])
         print(temp)
 
     def __str__(self):
         print
+
     def append(self, obj):
         if self._n == self._capacity:
             self._resize(2 * self._capacity)
@@ -37,15 +38,11 @@ class DynamicArray:
         self._A = B
         self._capacity = c
 
-
-
     def _make_array(self, c):
         return (c * ctypes.py_object)()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     a = DynamicArray()
     for i in range(5):
         a.append(i)
-
-

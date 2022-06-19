@@ -19,8 +19,9 @@ A list of data structures and algorithms implemented in Python, including some a
 - [Concepts](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Lists/Lists.md)
 - [Leetcode-Problems](https://github.com/lyb1234567/CS_Self_Study/tree/master/Data%20Structre%20and%20Algorithm/Lists/Leetcode)
 ### Linked Lists
-- Single linked lists
-- double linked lists
+- Concept
+- Implementation
+- Leetcode
 
 ### Stack and Queues
 - Implementation
