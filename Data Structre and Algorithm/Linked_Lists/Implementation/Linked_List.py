@@ -1,5 +1,5 @@
 from Linked_Lists.Implementation.Node import Node
-
+import math
 
 class linked_list:
     def __init__(self):
@@ -24,7 +24,80 @@ class linked_list:
                 count=count+1
                 temp=temp.next_element
             return count
-    def reverse
+    def reverse(self):
+        if self.is_empty():
+            return False
+        else:
+            if self.len()==1:
+                return self.head_Node
+            else:
+                prev=None
+                cur=self.get_head()
+                next=None
+                while cur:
+                    next=cur.next_element
+                    cur.next_element=prev
+                    prev=cur
+                    cur=next
+                    self.head_Node=prev
+                return True
+    def detect_loop(self):
+        if self.is_empty():
+            return False
+        else:
+            first = self.get_head()
+            second = self.get_head()
+            while first and second :
+                first = first.next_element
+                second = second.next_element.next_element
+                if second==first:
+                    return True
+            return False
+    def find_middle(self):
+        if self.is_empty():
+            return False
+        else:
+            count=0
+            L=self.len()
+            temp = self.get_head()
+            while temp:
+                count=count+1
+                if math.ceil(L/2)==count:
+                    return temp.data
+                temp=temp.next_element
+    def remove_duplicate(self):
+        if self.is_empty():
+            return False
+        else:
+            if self.len()==1:
+                return True
+            else:
+                temp=self.get_head()
+                while temp:
+                    inner=temp.next_element
+                    prev=None
+                    while inner:
+                        if inner.data==temp.data:
+                            prev.next_element=inner.next_element
+                            inner.next_element=None
+                        prev=inner
+                        inner=inner.next_element
+                    temp=temp.next_element
+                return True
+    def return_n(self,index):
+        if self.is_empty():
+            return False
+        if index>self.len():
+            return False
+        else:
+            temp=self.get_head()
+            count=0
+            while temp:
+                count=count+1
+                if count==7-index+1:
+                    return temp.data
+                temp=temp.next_element
+            return False
     def insertion_head(self, data):
         temp_node = Node(data)
         temp_node.next_element = self.head_Node

@@ -108,8 +108,103 @@ class double_linked_list:
             return count
 ```
 **Reverse**
+思路：
+1.首先检查链表是否为空，如果是空的，那么返回False
+2.如果仅有一个头节点，链表本身反转不变
+3.如果链表长度超过1，那么首先遍历整条链表，每次遍历一个节点，保存期prev和next节点，并将cur节点的下一个节点，设置为prev节点，同时将cur节点设为赋给prev节点，同时将cur更新为下一节点。
+4.将头节点更新为prev节点，那么反转完成，复杂度为 $O（n）$
 ```python
+    def reverse(self):
+        if self.is_empty():
+            return False
+        else:
+            if self.len()==1:
+                return self.head_Node
+            else:
+                prev=None
+                cur=self.get_head()
+                next=None
+                while cur:
+                    next=cur.next_element
+                    cur.next_element=prev
+                    prev=cur
+                    cur=next
+                    self.head_Node=prev
+                return True
+```
+**Detect loop**
+Use the method of double pointers, and when we iterate each pointer, if we come across the situation when both of them are equal to each other, then we can say we find a loop.
+The time complexity: $O(n)$
+```python
+    def detect_loop(self):
+        if self.is_empty():
+            return False
+        else:
+            first = self.get_head()
+            second = self.get_head()
+            while first and second :
+                first = first.next_element
+                second = second.next_element.next_element
+                if second==first:
+                    return True
+            return False
+```
 
+**Find the middle**
+```python
+    def find_middle(self):
+        if self.is_empty():
+            return False
+        else:
+            count=0
+            L=self.len()
+            temp = self.get_head()
+            while temp:
+                count=count+1
+                if math.ceil(L/2)==count:
+                    return temp.data
+                temp=temp.next_element
+```
+**Remove the duplicate**
+So,for each node, we interate the reaming list once, and then check there is a duplicate in the remaining linked list. If so, use the same method that we use when implementing the deletion.
+Time Complexity: $O(n^2)$
+```python
+    def remove_duplicate(self):
+        if self.is_empty():
+            return False
+        else:
+            if self.len()==1:
+                return True
+            else:
+                temp=self.get_head()
+                while temp:
+                    inner=temp.next_element
+                    prev=None
+                    while inner:
+                        if inner.data==temp.data:
+                            prev.next_element=inner.next_element
+                            inner.next_element=None
+                        prev=inner
+                        inner=inner.next_element
+                    temp=temp.next_element
+                return True
+```
+**Return N-th Node**
+```python
+    def return_n(self,index):
+        if self.is_empty():
+            return False
+        if index>self.len():
+            return False
+        else:
+            temp=self.get_head()
+            count=0
+            while temp:
+                count=count+1
+                if count==7-index+1:
+                    return temp.data
+                temp=temp.next_element
+            return False
 ```
 #### Operation on Double linked list
 **Insertion at head**
@@ -160,11 +255,15 @@ def deletion(self,data):
                 return True
             cur=cur.next_element
 ```
+
 #### Test
 - Test for inseration at head in single linked list
 - Test for inseration at tail single linked list
 - Test for searching value in single linked list
 - Test for Deletion by value in single linked list
+- Test for detecting the loop in single linked list
+- Test for finding the middle node in single linked list
+- Test for removing the duplicate in single linked list
 - Test for insertation at head at double linked list
 - Test for inseration at tail at double linked list
 - Test for Deletion by valuee in double linked list
