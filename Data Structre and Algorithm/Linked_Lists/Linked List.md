@@ -12,7 +12,7 @@ This section explains some basic concepts of linked lists first, then it will gi
 #### Concept
 The main difference between lists and linked lists is in the way elements are inserted and deleted. As for linked lists, insertion and deletion at the head happen in a constant amount of time, whereas at tail, it takes **O(n)** time. In the case of lists, it takes **O(n)** time to insert or delete a value. This is because of the different memory layouts of both the data structures. Lists are arranged contiguously in the memory, while nodes of a linked list may be dispersed in the memory. This memory layout also affects access operation; contiguous layout of lists allows us to index the list; thus, access operation in the list is O(1), whereas, for a linked list, we need to perform a traversal thus, it becomes **O(n)**. The following table sums up the performance tradeoff between list and linked list:
 
-![image](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Linked%20Lists/image/Comparison%20of%20lists%20and%20Linked%20list.PNG?raw=true)
+![image](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Linked_Lists/image/Comparison%20of%20lists%20and%20Linked%20list.PNG?raw=true)
 #### Single linked list
 In the single linked list, there is only one direction for the operation. The baisc Implementation will be:
 ```python
