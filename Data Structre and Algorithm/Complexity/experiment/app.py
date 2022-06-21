@@ -55,5 +55,5 @@ if __name__ == "__main__":
     plt.xlabel("n")
     plt.ylabel("time(s)")
     plt.legend(["Bubble Sorting", "Quick Sorting"])
-    plt.savefig("Comparison.png")
+    plt.savefig("image/Comparison.png")
     plt.show()

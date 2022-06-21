@@ -20,5 +20,6 @@ plt.xlabel("n")
 plt.ylabel("f(n)")
 plt.title("Comparison of increasing rate")
 plt.legend(["linear", "power 2", "power 3", "constant", "nlogn", "logn", "a^n"])
+
 plt.savefig("image/Experiement.png")
 plt.show()
