@@ -78,5 +78,5 @@ def peak_finder_binary_search(lst):
 **Comparison**
 If $n=10000000$, the noram peakfinder will cost around 2300000 ms, while the peak finder using binary search will cost only 26 ms, which is a lot more efficient !!:
 
-
+![image](https://github.com/lyb1234567/CS_Self_Study/blob/master/MIT-6.006/PeakFinding/image/Comparison.png?raw=true)
 **2D**
