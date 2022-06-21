@@ -81,8 +81,10 @@ If $n=10000000$, the noram peakfinder will cost around 2300000 ms, while the pea
 
 ![image](https://github.com/lyb1234567/CS_Self_Study/blob/master/MIT-6.006/PeakFinding/image/Comparison.png?raw=true)
 
+
 **2D**
 When it comes to Two-dimensional version:
+
 ![image](https://github.com/lyb1234567/CS_Self_Study/blob/master/MIT-6.006/PeakFinding/image/2D.PNG?raw=true)
 if a is a peak, then it mush satisfy the following condition:
 $$a\geq b, a\geq c, a\geq d, a\geq e$$
