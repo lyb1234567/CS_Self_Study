@@ -27,7 +27,13 @@ class double_linked_list:
                 count=count+1
                 temp=temp.next_element
             return count
-
+    def remove_head(self):
+        if self.is_empty():
+            return False
+        temp=self.get_head()
+        self.head_Node=temp.next_element
+        temp.next_element=None
+        return True
     def is_empty(self):
         if self.head_Node==None:
             return True
