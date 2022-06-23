@@ -1,3 +1,16 @@
+# Stack and Queue
+This section explains some basic concepts of  stack and queue first, then it will give the implementations.
+
+## Table and Contents
+- [Stack](#stack)
+- [Queue](#queue)
+- [Leetcode](#leetcode)
+
+
+
+## Stack
+Stacks can be implemented using Lists or Linked Lists in Python language. Each implementation has its own advantages and disadvantages. Here, however, we will show an implementation of stacks using lists:
+```python
 class MyStack:
     def __init__(self):
         self.stack=[]
@@ -24,17 +37,7 @@ class MyStack:
         return self.stack_size
     def print_stack(self):
         print(self.stack)
+```
+## Queue
 
-if __name__ == "__main__" :
-    stack_obj = MyStack()
-    print("is_empty(): " + str(stack_obj.is_empty()))
-    print("peek(): " + str(stack_obj.peek()))
-    print("size(): " + str(stack_obj.size()))
-
-    for i in range(5):
-        stack_obj.push(i)
-    stack_obj.print_stack()
-
-    stack_obj.pop()
-    stack_obj.pop()
-    stack_obj.print_stack()
+## Leetcode
