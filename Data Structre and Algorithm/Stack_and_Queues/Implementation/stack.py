@@ -10,6 +10,8 @@ class MyStack:
         self.stack.append(data)
 
     def pop(self):
+        if self.is_empty():
+            return None
         data=self.peek()
         self.stack.remove(data)
         self.stack_size=self.stack_size-1
