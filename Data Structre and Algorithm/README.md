@@ -24,9 +24,9 @@ A list of data structures and algorithms implemented in Python, including some a
 - [Tests](https://github.com/lyb1234567/CS_Self_Study/tree/master/Data%20Structre%20and%20Algorithm/Linked_Lists/tests)
 
 ### Stack and Queues
-- Implementation
-- DFS and BFS
-- Problems
+- [Concept](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Stack_and_Queues/Stack.md)
+- [Implementation](https://github.com/lyb1234567/CS_Self_Study/tree/master/Data%20Structre%20and%20Algorithm/Stack_and_Queues/Implementation)
+- [Leetcode](https://github.com/lyb1234567/CS_Self_Study/tree/master/Data%20Structre%20and%20Algorithm/Stack_and_Queues/Leetcode)
 ### Graphs
 
 ### Trees
