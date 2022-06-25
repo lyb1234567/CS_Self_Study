@@ -14,7 +14,7 @@
 13. to check write: **gdb --version**
     
 
-##运行多个Cpp文件,包括头文件
+## 运行多个Cpp文件,包括头文件
 
 因为使用的使code runner, 默认每次编译单个Cpp文件，所以需要修改一下json配置
 **tasks.json**配置
