@@ -1,0 +1,14 @@
+﻿  2048.cpp
+  board.cpp
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\2048\board.cpp(36,6): warning C4101: 'a': unreferenced local variable
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\2048\board.cpp(37,6): warning C4101: 'b': unreferenced local variable
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\2048\board.cpp(35,6): warning C4101: 'y': unreferenced local variable
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\2048\board.cpp(34,6): warning C4101: 'x': unreferenced local variable
+  list.cpp
+  Menu.cpp
+  Number.cpp
+  used_function.cpp
+  Generating Code...
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\2048\Number.cpp(555): warning C4715: 'Number::game_over': not all control paths return a value
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\2048\list.cpp(142): warning C4715: 'list::remove': not all control paths return a value
+  2048.vcxproj -> C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\2048\x64\Debug\2048.exe

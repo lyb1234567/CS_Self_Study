@@ -1,0 +1,2 @@
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\2048\2048\x64\Debug\2048.exe
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\2048\x64\Debug\2048.exe

@@ -1,11 +1,11 @@
-#include "list.h"
-#include <iostream>
-#include <string>
+#include"list.h"
+#include<iostream>
+#include<string>
 using namespace std;
 int list::len()
 {
     int i = 0;
-    Node *temp = head;
+    Node* temp = head;
     while (temp != NULL)
     {
         i = i + 1;
@@ -15,7 +15,7 @@ int list::len()
 }
 void list::push_head(string new_data)
 {
-    Node *new_node = new Node();
+    Node* new_node = new Node();
     new_node->data = new_data;
     new_node->next = head;
     new_node->prev = NULL;
@@ -27,7 +27,7 @@ void list::push_head(string new_data)
 }
 void list::push_tail(string new_data)
 {
-    Node *temp = new Node();
+    Node* temp = new Node();
     temp->data = new_data;
     temp->next = NULL;
     if (head == NULL)
@@ -36,7 +36,7 @@ void list::push_tail(string new_data)
     }
     else
     {
-        Node *p = head;
+        Node* p = head;
         while (p->next != NULL)
         {
             p = p->next;
@@ -49,7 +49,7 @@ void list::push_tail(string new_data)
 void list::display_end()
 {
     tail = get_end();
-    Node *temp = tail;
+    Node* temp = tail;
     while (temp)
     {
 
@@ -61,7 +61,7 @@ void list::display_end()
 }
 void list::display_head()
 {
-    Node *temp = head;
+    Node* temp = head;
     while (temp)
     {
         cout << temp->data << "<==>";
@@ -75,7 +75,7 @@ void list::display_head()
 string list::find(int index)
 {
     int count = 0;
-    Node *temp = head;
+    Node* temp = head;
     int l = len();
     if (l == 1)
     {
@@ -94,7 +94,6 @@ string list::find(int index)
     }
     return " ";
 }
-
 bool list::remove(string a)
 {
     if (len() == 0)
@@ -103,7 +102,7 @@ bool list::remove(string a)
     }
     else
     {
-        Node *temp = head;
+        Node* temp = head;
         if (len() == 1 && temp->data == a)
         {
             head = NULL;
@@ -115,7 +114,7 @@ bool list::remove(string a)
         }
         else
         {
-            Node *prev = temp;
+            Node* prev = temp;
             if (temp->data == a)
             {
                 head = temp->next;
@@ -137,11 +136,13 @@ bool list::remove(string a)
                 return false;
             }
         }
+
+
     }
 }
-Node *list::get_end()
+Node* list::get_end()
 {
-    Node *temp = head;
+    Node* temp = head;
     while (temp->next)
     {
         temp = temp->next;
