@@ -77,13 +77,13 @@ Time complexity of operation on Queue:
 
 
 ## Leetcode
-- [ ] [binary converter](#binary-converter)
+- [x] [binary converter](#binary-converter)
 - [x] [Reverse K element](#reverse-k-element)
 - [x] [Implement Queue](#implement-queue-using-stack)
 - [x] [Sort Stack](#sort-stack)
 - [ ] [Post-fix Expression](#post-fix-expression)
 - [ ] [Next Greater Element Using a Stack](#next-greater-element-using-a-stack)
-- [ ] [Check Balanced Parentheses using Stack](#check-balanced-parentheses-using-stack)
+- [x] [Check Balanced Parentheses using Stack](#check-balanced-parentheses-using-stack)
 - [x] [min( ) Function Using a Stack](#min-function-using-a-stack)
 
 
