@@ -1,2 +1,3 @@
-﻿  BookShop Management.cpp
-  BookShop Management.vcxproj -> \\studata10\home\EL\Elc20yl\ManW10\Desktop\CS\CS_Self_Study\C++ project\BookShop Management\BookShop Management\Debug\BookShop Management.exe
+﻿  Used_function.cpp
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\BookShop Management\BookShop Management\BookShop Management\Used_function.cpp(98,9): warning C4101: 'i': unreferenced local variable
+  BookShop Management.vcxproj -> C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\BookShop Management\BookShop Management\Debug\BookShop Management.exe
