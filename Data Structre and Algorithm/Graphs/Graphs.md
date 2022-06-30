@@ -45,7 +45,16 @@ If you have n vertices, then all the possible edges become **n(n-1).**
 Time Complexity of Operation on Graph
 ![complexity](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Graphs/image/Complexity.PNG?raw=true)
 ## BFS
+The BFS algorithm earns its name because it grows breadth-wise. All the nodes at a certain level are traversed before moving on to the next level.
+
+The level-wise expansion ensures that for any starting vertex, you can reach all others, one level at a time.
+
+```python
+
+```
 
 ## DFS
+The DFS algorithm is the opposite of BFS in the sense that it grows depth-wise.
 
+Starting from any node, we keep moving to an adjacent node until we reach the farthest level. Then we move back to the starting point and pick another adjacent node. Once again, we probe to the farthest level and move back. This process continues until all nodes are visited.
 ## Leetcode
