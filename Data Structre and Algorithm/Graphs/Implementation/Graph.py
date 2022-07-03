@@ -1,4 +1,5 @@
 from Linked_Lists.Implementation.Linked_List import linked_list
+from Stack_and_Queues.Implementation.queue import MyQueue
 import networkx as nx
 from networkx.algorithms import bipartite
 import matplotlib.pyplot as plt
@@ -116,6 +117,7 @@ class Graph:
             )
             self.link=[]
             self.link_map={}
+            plt.show()
         else:
             self.add_link()
             K3 = nx.Graph(self.link)
@@ -132,6 +134,33 @@ class Graph:
             nx.draw(G, pos, cmap=plt.get_cmap('jet'),
                     node_color=values, node_size=900, with_labels=True, connectionstyle='arc3, rad = 0.1', ax=ax)
             self.link=[]
+            plt.show()
+    def bfs(self,point):
+        queue=MyQueue()
+        visited=[]
+        queue.enqueue(int(point))
+        visited.append(int(point))
+        while not queue.is_empty():
+             s=int(queue.dequeue())
+             temp=self.array[s].get_head()
+             while temp:
+                 if temp.data not in visited:
+                     visited.append(temp.data)
+                     queue.enqueue(temp.data)
+                 temp=temp.next_element
+        #这段代码可加可不加，本身bfs算法，并没有要求一定要所有的节点都被遍历到
+        for i in range(self.vertices):
+            if i not in visited:
+                visited.append(i)
+        return visited
+    def dfs(self,visited,point):
+       if point not in visited:
+           visited.append(point)
+           temp=self.array[int(point)].get_head()
+           while temp:
+               self.dfs(visited,str(temp.data))
+               temp=temp.next_element
+       return visited
     def anime(self):
         ani = FuncAnimation(fig, update, frames=6, interval=1000, repeat=True)
         plt.show()
@@ -143,29 +172,13 @@ def update(num):
     destination=num
     print(num)
     g.print_graph_visualization()
-    # i = num // 3
-    # j = num % 3 + 1
-    # triad = sequence_of_letters[i:i+3]
-    # path = ["O"] + ["".join(sorted(set(triad[:k + 1]))) for k in range(j)]
-    #
-    # # Background nodes
-    # nx.draw_networkx_edges(G, pos=pos, ax=ax, edge_color="gray")
-    # null_nodes = nx.draw_networkx_nodes(G, pos=pos, nodelist=set(G.nodes()) - set(path), node_color="white",  ax=ax)
-    # null_nodes.set_edgecolor("black")
-    #
-    # # Query nodes
-    # query_nodes = nx.draw_networkx_nodes(G, pos=pos, nodelist=path, node_color=idx_colors[:len(path)], ax=ax)
-    # query_nodes.set_edgecolor("white")
-    # nx.draw_networkx_labels(G, pos=pos, labels=dict(zip(path,path)),  font_color="white", ax=ax)
-    # edgelist = [path[k:k+2] for k in range(len(path) - 1)]
-    # nx.draw_networkx_edges(G, pos=pos, edgelist=edgelist, width=idx_weights[:len(path)], ax=ax)
-    #
-    # # Scale plot ax
-    # ax.set_title("Frame %d:    "%(num+1) +  " - ".join(path), fontweight="bold")
-    # ax.set_xticks([])
-    # ax.set_yticks([])
 if __name__=="__main__":
-    g=Graph(4)
-    g.anime()
-
+    g=Graph(3)
+    g.add_edge(0, 2)
+    g.add_edge(0, 1)
+    g.add_edge(0, 0)
+    g.add_edge(1, 0)
+    g.add_edge(1,2)
+    g.print_graph()
+    g.print_graph_visualization()
 
