@@ -21,6 +21,9 @@
     <ClCompile Include="Used_function.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="dist\jsoncpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Used_function.h">

@@ -1,3 +1,4 @@
 ﻿  Used_function.cpp
-C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\BookShop Management\BookShop Management\BookShop Management\Used_function.cpp(98,9): warning C4101: 'i': unreferenced local variable
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\BookShop Management\BookShop Management\BookShop Management\Used_function.cpp(444,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\BookShop Management\BookShop Management\BookShop Management\Used_function.cpp(449,22): warning C4018: '<': signed/unsigned mismatch
   BookShop Management.vcxproj -> C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\BookShop Management\BookShop Management\Debug\BookShop Management.exe

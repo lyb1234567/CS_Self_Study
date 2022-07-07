@@ -1,0 +1,4 @@
+Name    Height  Weight   Age       Username         Password
+
+Yasdb     180     170      27         ksam32199        Liu138128@
+Wang     175     150      27        ksam321996        Liu138128@
