@@ -1,4 +1,7 @@
-﻿  Used_function.cpp
-C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\BookShop Management\BookShop Management\BookShop Management\Used_function.cpp(444,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\BookShop Management\BookShop Management\BookShop Management\Used_function.cpp(449,22): warning C4018: '<': signed/unsigned mismatch
+﻿  BookShop Management.cpp
+  Used_function.cpp
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\BookShop Management\BookShop Management\BookShop Management\Used_function.cpp(68,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\BookShop Management\BookShop Management\BookShop Management\Used_function.cpp(73,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\BookShop Management\BookShop Management\BookShop Management\Used_function.cpp(468,14): warning C4101: 'choice': unreferenced local variable
+  Generating Code...
   BookShop Management.vcxproj -> C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\BookShop Management\BookShop Management\Debug\BookShop Management.exe

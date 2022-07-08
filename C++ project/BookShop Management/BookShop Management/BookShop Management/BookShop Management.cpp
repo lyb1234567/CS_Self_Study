@@ -17,7 +17,7 @@
 int main()
 {
     using namespace std;
-   //Show_Menu();
-    Show_Single_Student();
+    Show_Menu();
+    system("explorer record.csv");
     return 0;
 }

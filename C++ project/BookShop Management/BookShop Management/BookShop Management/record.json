@@ -1,18 +1,35 @@
 [
 	{
-		"Name": "Yasdb",
-		"Password": "123",
-		"Username": "ksam32199",
-		"age": "27",
-		"height": "180",
-		"weight": "170"
+		"Name" : "Liu",
+		"Password" : "1234567hjkwQ",
+		"Username" : "ksam32199",
+		"age" : "24",
+		"height" : "180",
+		"weight" : "145"
 	},
 	{
-		"Name": "Wang",
-		"Password": "Liu138128@",
-		"Username": "ksam321996",
-		"age": "27",
-		"height": "175",
-		"weight": "150"
+		"Name" : "Wang",
+		"Password" : "Liu138128@",
+		"Username" : "ksam321996",
+		"age" : "23",
+		"height" : "160",
+		"weight" : "150"
+	},
+	{
+		"Name" : "Yan",
+		"Password" : "Liu138128",
+		"Username" : "ksam32199",
+		"age" : "24",
+		"height" : "180",
+		"weight" : "190"
+	},
+	{
+		"Name" : "Tu",
+		"Password" : "12345567hjkwQ",
+		"Username" : "ksam32199",
+		"age" : "25",
+		"height" : "180",
+		"weight" : "140"
 	}
 ]
+
