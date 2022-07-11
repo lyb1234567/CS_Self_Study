@@ -1,0 +1,14 @@
+﻿  Mysql_C++.cpp
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\mysql_C++\Mysql_C++\Mysql_C++.cpp(247,24): warning C4311: 'type cast': pointer truncation from 'char *' to 'int'
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\mysql_C++\Mysql_C++\Mysql_C++.cpp(247,24): warning C4302: 'type cast': truncation from 'char *' to 'int'
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\mysql_C++\Mysql_C++\Mysql_C++.cpp(248,23): warning C4311: 'type cast': pointer truncation from 'char *' to 'int'
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\mysql_C++\Mysql_C++\Mysql_C++.cpp(248,23): warning C4302: 'type cast': truncation from 'char *' to 'int'
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\mysql_C++\Mysql_C++\Mysql_C++.cpp(685,23): warning C4311: 'type cast': pointer truncation from 'char *' to 'int'
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\mysql_C++\Mysql_C++\Mysql_C++.cpp(685,23): warning C4302: 'type cast': truncation from 'char *' to 'int'
+C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\mysql_C++\Mysql_C++\Mysql_C++.cpp(1056,6): warning C4101: 'choice': unreferenced local variable
+  Generating code
+  2 of 213 functions ( 0.9%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Mysql_C++.vcxproj -> C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\mysql_C++\Mysql_C++\x64\Release\Mysql_C++.exe
