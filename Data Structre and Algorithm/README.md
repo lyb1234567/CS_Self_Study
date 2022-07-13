@@ -34,7 +34,7 @@ A list of data structures and algorithms implemented in Python, including some a
 ### Trees
 - [Concept]()
 - [Implementation]()
-- [Leetcode]()
+- [Leetcode]
 ### Tire
 
 ### Heap
