@@ -28,11 +28,13 @@ A list of data structures and algorithms implemented in Python, including some a
 - [Implementation](https://github.com/lyb1234567/CS_Self_Study/tree/master/Data%20Structre%20and%20Algorithm/Stack_and_Queues/Implementation)
 - [Leetcode](https://github.com/lyb1234567/CS_Self_Study/tree/master/Data%20Structre%20and%20Algorithm/Stack_and_Queues/Leetcode)
 ### Graphs
-- [Concept]
-- [Implementation]
-- [Leetcode] 
+- [Concept](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Graphs/Graphs.md)
+- [Implementation](https://github.com/lyb1234567/CS_Self_Study/tree/master/Data%20Structre%20and%20Algorithm/Graphs/Implementation)
+- [Leetcode](https://github.com/lyb1234567/CS_Self_Study/tree/master/Data%20Structre%20and%20Algorithm/Graphs/Leetcode) 
 ### Trees
-
+- [Concept]()
+- [Implementation]()
+- [Leetcode]()
 ### Tire
 
 ### Heap
