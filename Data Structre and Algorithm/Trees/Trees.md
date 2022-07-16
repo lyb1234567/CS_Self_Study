@@ -245,7 +245,7 @@ LL LR RR RF.详情可见：（https://www.educative.io/courses/data-structures-c
 ```
 **Comparison between the AVL Tree and BST**
 搜索某个节点，AVL的速度大概是普通BST速度的三倍左右
-
+![image](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Trees/image/Comparison_AVL_BST.PNG?raw=true)
 ## Red Black Tree
 
 ## 2-3 Trees
