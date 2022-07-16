@@ -1,11 +1,11 @@
 # Trees
 This section explains some basic concepts of Trees first, then it will give the implementations of them.
 - [Concept](#concept)
-- [Binary Tree](#binary_tree)
-- [Binary Search Tree](#binary_search_tree)
-- [AVL Tree](#avl_tree)
-- [Red Black Tree](#red_black_tree)
-- -[2-3 Trees](#red_black_tree) 
+- [Binary Tree](#binary-tree)
+- [Binary Search Tree](#binary-search-tree)
+- [AVL Tree](#avl-tree)
+- [Red Black Tree](#red-black-tree)
+- -[2-3 Trees](#2-3-trees) 
 - [Leetcode](#leetcode)
 
 
