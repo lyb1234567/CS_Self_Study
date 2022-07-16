@@ -4,10 +4,13 @@ class Binary_Search_Tree:
     def __init__(self):
         self.root=None
         self.graph={}
+        self.graph_tree={}
+        self.lst_tree=[]
     def insert(self,val):
         if self.root==None:
             self.root=Node(val)
             self.graph[str(self.root.val)]=[]
+            self.lst_tree.append(self.root.val)
         else:
             self.insert_(val,self.root)
 
@@ -22,6 +25,7 @@ class Binary_Search_Tree:
             if cur_node.left==None:
                 cur_node.left=Node(val)
                 cur_node.left.parent=cur_node
+                self.lst_tree.append(val)
                 self.graph[str(cur_node.val)].append(str(val))
                 self.graph[str(cur_node.val)].sort()
                 self.graph[str(val)]=[]
@@ -31,6 +35,7 @@ class Binary_Search_Tree:
             if cur_node.right==None:
                 cur_node.right=Node(val)
                 cur_node.right.parent=cur_node
+                self.lst_tree.append(val)
                 self.graph[str(cur_node.val)].append(str(val))
                 self.graph[str(cur_node.val)].sort()
                 self.graph[str(val)] = []
@@ -42,93 +47,117 @@ class Binary_Search_Tree:
 
     def search(self,val):
         if self.root.val==val:
-            print("Find the node " + str(val))
-            return True
+            return [True,self.root]
         else:
-            self.search_(val,self.root)
+            return self.search_(val,self.root)
     def search_(self,val,cur_node):
         if val<=cur_node.val:
             if cur_node.left==None:
-                print("The node is not in the tree")
-                return False
+                return [False,None]
             if cur_node.left.val==val:
-                print("Find the node " + str(val))
-                return True
+                return [True,cur_node.left]
             else:
-                self.search_(val,cur_node.left)
+                return self.search_(val,cur_node.left)
+
         elif val>=cur_node.val:
             if cur_node.right==None:
-                print("The node is not in the tree")
-                return False
+                return [False,None]
             if cur_node.right.val==val:
-                print("Find the node "+str(val))
-                return True
+                return [True,cur_node.right]
             else:
-                self.search_(val,cur_node.right)
-    def delete(self,val):
+                return self.search_(val,cur_node.right)
+
+    def child_num(self,node):
+        count=0
+        if node.left!=None:
+            count=count+1
+        if node.right!=None:
+            count=count+1
+        return count
+
+    def get_height_tree(self):
         if self.root==None:
-            print("The tree is empty")
+            return 0
+        else:
+            cur_height=0
+            return self.get_height_tree_(self.root,cur_height)-1
+    def get_height_tree_(self,cur_node,height):
+           if cur_node==None:
+               return height
+           left=self.get_height_tree_(cur_node.left,height+1)
+           right=self.get_height_tree_(cur_node.right,height+1)
+           return max(left,right)
+    def get_height_node(self,node):
+        if node==None:
+            return 0
+        else:
+            if node.left==None and node.right==None:
+                return max(self.get_height_node(node.left),self.get_height_node(node.right))
+            else:
+                return max(self.get_height_node(node.left), self.get_height_node(node.right))+1
+    def min_node(self,node):
+        temp=node.right
+        while temp.left:
+            temp=temp.left
+        return temp
+    def delete_value(self,val):
+        if self.search(val)[0]==False:
+            print("The node is not in the tree!!")
             return False
         else:
-            if self.root.val==val:
-                self.root=None
-                return True
-            else:
-                 self.delete_(val,self.root)
-    def delete_(self,val,cur_node):
-        if val<cur_node.val:
-            if cur_node.left.val==val and self.check_leaf(cur_node.left):
-                self.graph[str(cur_node.val)].remove(str(cur_node.left.val))
-                del self.graph[str(cur_node.left.val)]
-                cur_node.left = None
-                return True
-            if cur_node.left.val==val and cur_node.left.left!=None and cur_node.left.right==None:
-               print(cur_node.left.left)
-               del self.graph[str(cur_node.left.val)]
-               self.graph[str(cur_node.val)].remove(str(cur_node.left.val))
-               cur_node.left=cur_node.left.left
-               cur_node.left.left.parent=cur_node
-               self.graph[str(cur_node.val)].append(str(cur_node.left.left.val))
-               self.graph[str(cur_node.val)].sort()
-               return True
-            if cur_node.left.val == val and cur_node.left.left == None and cur_node.left.right != None:
-                del self.graph[str(cur_node.left.val)]
-                self.graph[str(cur_node.val)].remove(str(cur_node.left.val))
-                cur_node.left = cur_node.left.right
-                cur_node.left.right.parent = cur_node
-                self.graph[str(cur_node.val)].append(str(cur_node.left.right.val))
-                del self.graph[str(cur_node.left.val)]
-                self.graph[str(cur_node.val)].sort()
-                return True
-            else:
-                self.delete_(val,cur_node.left)
-        if val>cur_node.val:
-            if cur_node.right.val==val and self.check_leaf(cur_node.right):
-                self.graph[str(cur_node.val)].remove(str(cur_node.right.val))
-                del self.graph[str(cur_node.right.val)]
-                cur_node.right = None
-                return True
-            if cur_node.right.val == val and cur_node.right.left != None and cur_node.right.right == None:
-                del self.graph[str(cur_node.right.val)]
-                self.graph[str(cur_node.val)].remove(str(cur_node.right.val))
-                cur_node.right = cur_node.right.left
-                cur_node.right.left.parent = cur_node
-                self.graph[str(cur_node.val)].append(str(cur_node.right.left.val))
-                self.graph[str(cur_node.val)].sort()
-                return True
-            if cur_node.left.val == val and cur_node.right.left == None and cur_node.right.right != None:
-                del self.graph[str(cur_node.right.val)]
-                self.graph[str(cur_node.val)].remove(str(cur_node.right.val))
-                cur_node.right = cur_node.right.right
-                cur_node.right.right.parent = cur_node
-                self.graph[str(cur_node.val)].append(str(cur_node.right.right.val))
-                self.graph[str(cur_node.val)].sort()
-                return True
-            else:
-                self.delete_(val,cur_node.right)
+            node=self.search(val)[1]
+            self.delete_node(node)
 
-    def print_tree(self):
-        print(self.graph)
+    def delete_node(self,node):
+        child_num=self.child_num(node)
+        node_parent=node.parent
+        if child_num==0:
+            if node_parent.left==node:
+                node_parent.left=None
+            else:
+                node_parent.right=None
+
+        elif child_num==1:
+            child=None
+            if node.left!=None:
+                child=node.left
+            elif node.right!=None:
+                child=node.right
+            if node_parent.left==node:
+                node_parent.left=child
+            elif node_parent.right==node:
+                node_parent.right=child
+            child.parent = node_parent
+        elif child_num==2:
+            succssor = self.min_node(node)
+            # 将替代者的值复制到所需删除节点的为止
+            temp=node.val
+            b=succssor.val
+            succssor.val=temp
+            node.val = b
+            # 然后删除该节点，因为该节点一定是叶子节点（leaf node),所以类似于直接删除
+            self.delete_node(succssor)
+        print(node.parent.val)
+    def pre_order(self,node):
+        print(node.val,end=" ")
+        if node.left:
+            self.pre_order(node.left)
+        if node.right:
+            self.pre_order(node.right)
+
+    def post_order(self,node):
+        if node:
+            self.post_order(node.left)
+            self.post_order(node.right)
+            print(node.val,end=" ")
+
+    def in_order(self,node):
+        if node:
+            self.in_order(node.left)
+            print(node.val,end=" ")
+            self.in_order(node.right)
+
+
 
 
 
@@ -141,7 +170,9 @@ if __name__=="__main__":
      bst.insert(7)
      bst.insert(8)
      bst.insert(1)
-     bst.insert(0)
-     bst.delete(1)
-     bst.print_tree()
+     bst.insert(10)
+     bst.insert(9)
+     bst.insert(11)
+     bst.delete_value(10)
+
 
