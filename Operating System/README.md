@@ -1,4 +1,6 @@
 # 操作系统
+**通用寄存器**
+
 **8086 CPU给出物理地址的方法**
 8086 CPU有20跟总线，也就是有1MB的寻址能力，但8086CPU又是16位寄存器结构，也就是说，从内部结构来看，它的寻址能力只有64KB（$64*1024=2^{16}$）. 所以为了展现出1MB的寻址能力，8086CPU内部结合两个16位地址，来形成20位的物理地址。
 ![image](https://github.com/lyb1234567/CS_Self_Study/blob/master/Operating%20System/image/8086CPU.PNG?raw=true)
