@@ -251,3 +251,93 @@ LL LR RR RF.详情可见：（https://www.educative.io/courses/data-structures-c
 ## 2-3 Trees
 
 ## Leetcode
+- [Find minimum value in Binary Search Tree](#find-minimum-value-in-binary-search-tree)
+- [Find kth maximum value](#find-kth-maximum-value)
+- [Find ancestors of a node](#find-the-anscetors-of-a-node)
+- [Find Nodes at "k" distance from the Root](#find-nodes-at-k-distance-from-the-root)
+
+
+### Find minimum value in Binary Search Tree
+对二分查找树进行遍历递归，使用一个temp_min作为辅助，找到即可找到最小值,思路跟查找某个值是一样的
+```python
+    def find_min(self):
+        min=self.root.val
+        if self.root.left==None and self.root.right==None:
+            return min
+        else:
+            return self.find_min_(self.root,min)
+
+    def find_min_(self,node,min):
+        if node.left:
+            if node.left.val<min:
+                min=node.left.val
+            min=self.find_min_(node.left,min)
+            return min
+
+        if node.right:
+            if node.right.val<min:
+                min=node.right.val
+            min=self.find_min_(node.right,min)
+            return min
+        return min
+```
+
+### Find kth maximum value
+最简单的做法就是用一个辅助数组，然后对BST进行内序遍历，这样就会得到一个从小到大排列好的数组然后就可以，想要获得第K个最大值，则返回lst[-k]即可
+```python
+    def in_order(self,node,lst):
+        if node:
+            self.in_order(node.left,lst)
+            print(node.val,end=" ")
+            lst.append(node.val)
+            self.in_order(node.right,lst)
+        return lst
+```
+
+### Find the anscetors of a node
+本题思路就是从头节点开始遍历，对每个节点进行比较，如果大于目前节点就右拐小于目前节点就左拐，并将遍历过的节点存入数组中。
+```python
+    def find_ancestors(self,k):
+        lst=[]
+        if not self.root:
+            return None
+
+        if k==self.root.val:
+            return None
+        else:
+            current=self.root
+            while current:
+                if k<current.val:
+                    lst.append(current.val)
+                    current=current.left
+                elif k>current.val:
+                    lst.append(current.val)
+                    current=current.right
+                else:
+                    return lst[::-1]
+            return []
+```
+
+### Find Nodes at "k" distance from the Root
+本题思路也可以遍历所有节点，对每个目前节点进行左子二叉树和右子二叉树的递归，每递归一次，k值就减1，知道k值为0，此时就可以存入数组中
+```python
+    def find_K_node(self,k):
+        lst=[]
+        if not self.root:
+            return None
+        if k==0:
+            return [self.root.val]
+        else:
+            cur=self.root
+            self.find_K_node_(cur,k,lst)
+            return lst
+
+    def find_K_node_(self,cur,k,lst):
+         if cur==None:
+             return
+         if k==0:
+             lst.append(cur.val)
+         else:
+             self.find_K_node_(cur.left,k-1,lst)
+             self.find_K_node_(cur.right,k-1,lst)
+```
