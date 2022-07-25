@@ -145,34 +145,116 @@ class Binary_Search_Tree:
         if node.right:
             self.pre_order(node.right)
 
-    def post_order(self,node):
+    def post_order(self,node,lst):
         if node:
-            self.post_order(node.left)
-            self.post_order(node.right)
+            self.post_order(node.left,lst)
+            self.post_order(node.right,lst)
             print(node.val,end=" ")
+            lst.append(node.val)
+        return lst
 
-    def in_order(self,node):
+    def in_order(self,node,lst):
         if node:
-            self.in_order(node.left)
+            self.in_order(node.left,lst)
             print(node.val,end=" ")
-            self.in_order(node.right)
+            lst.append(node.val)
+            self.in_order(node.right,lst)
+        return lst
+
+    def find_min(self):
+        min=self.root.val
+        if self.root.left==None and self.root.right==None:
+            return min
+        else:
+            return self.find_min_(self.root,min)
+
+    def find_min_(self,node,min):
+        if node.left:
+            if node.left.val<min:
+                min=node.left.val
+            min=self.find_min_(node.left,min)
+            return min
+
+        if node.right:
+            if node.right.val<min:
+                min=node.right.val
+            min=self.find_min_(node.right,min)
+            return min
+        return min
+    def find_K_th_Max(self,k):
+         tree=[]
+         lst=self.in_order(self.root,tree)
+         return lst[-k]
+    def find_ancestors(self,k):
+        lst=[]
+        if not self.root:
+            return None
+
+        if k==self.root.val:
+            return None
+        else:
+            current=self.root
+            while current:
+                if k<current.val:
+                    lst.append(current.val)
+                    current=current.left
+                elif k>current.val:
+                    lst.append(current.val)
+                    current=current.right
+                else:
+                    return lst[::-1]
+            return []
+    def find_K_node(self,k):
+        lst=[]
+        if not self.root:
+            return None
+        if k==0:
+            return [self.root.val]
+        else:
+            cur=self.root
+            self.find_K_node_(cur,k,lst)
+            return lst
+
+    def find_K_node_(self,cur,k,lst):
+         if cur==None:
+             return
+         if k==0:
+             lst.append(cur.val)
+         else:
+             self.find_K_node_(cur.left,k-1,lst)
+             self.find_K_node_(cur.right,k-1,lst)
+def test_find_min(lst):
+    bst = Binary_Search_Tree()
+    for i in lst:
+        bst.insert(i)
+    bst.pre_order(bst.root)
+    print("\n")
+    print(bst.find_min())
 
 
+def test_find_K_Max(lst,n):
+    bst = Binary_Search_Tree()
+    for i in lst:
+        bst.insert(i)
+    bst.pre_order(bst.root)
+    print("\n")
+    tree=[]
+    print(bst.find_K_th_Max(n))
 
-
-
-
+def test_find_ancestors(lst):
+    bst = Binary_Search_Tree()
+    for i in lst:
+        bst.insert(i)
+    print(bst.find_ancestors(-19))
 if __name__=="__main__":
      bst=Binary_Search_Tree()
-     bst.insert(3)
-     bst.insert(4)
-     bst.insert(2)
-     bst.insert(7)
-     bst.insert(8)
-     bst.insert(1)
+     bst.insert(30)
      bst.insert(10)
-     bst.insert(9)
-     bst.insert(11)
-     bst.delete_value(10)
+     bst.insert(-14)
+     bst.insert(-19)
+     bst.insert(16)
+     bst.insert(12)
+     print(bst.find_K_node(2))
+
 
 
