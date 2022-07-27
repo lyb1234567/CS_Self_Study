@@ -5,7 +5,7 @@
 #include <conio.h>
 #define HOST "127.0.0.1"
 #define USER "root"
-#define PASS "12345"/*put the password of MySQL in here between ""*/
+#define PASS "MySQL" /*put the password of MySQL in here between ""*/
 #define DATABASE "Management"
 #define PORT 3306
 #define PASSWORD 1234/*Set a Numeric Password for Your Application*/
@@ -1053,9 +1053,11 @@ int main()
 	pass();
 	conn = mysql_init(0);
 	conn = mysql_real_connect(conn, HOST, USER, PASS, DATABASE, PORT, NULL, 0);
+	cout << conn << endl;
 	int choice;
 	if (conn)
 	{
+		cout << "sb";
 		while (1)
 		{
 			system("cls");
@@ -1064,7 +1066,6 @@ int main()
 	}
 	else
 	{
-		system("cls");
 		cout << "Error While connection to database." << endl << "Contact Tech Expert." << endl;
 		_getch();
 	}

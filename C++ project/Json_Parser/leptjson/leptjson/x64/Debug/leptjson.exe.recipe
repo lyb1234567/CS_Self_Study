@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\Json解析库\leptjson\x64\Debug\leptjson.exe</FullPath>
+      <FullPath>C:\Users\admin\Desktop\CS\CS_Self_Study\C++ project\Json_Parser\leptjson\x64\Debug\leptjson.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
