@@ -1,0 +1,4 @@
+C:/Users/admin/Desktop/CS/CS_Self_Study/C++ project/Json_Parser/leptjson/build/CMakeFiles/leptjson.dir
+C:/Users/admin/Desktop/CS/CS_Self_Study/C++ project/Json_Parser/leptjson/build/CMakeFiles/leptjson_test.dir
+C:/Users/admin/Desktop/CS/CS_Self_Study/C++ project/Json_Parser/leptjson/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/admin/Desktop/CS/CS_Self_Study/C++ project/Json_Parser/leptjson/build/CMakeFiles/ZERO_CHECK.dir
