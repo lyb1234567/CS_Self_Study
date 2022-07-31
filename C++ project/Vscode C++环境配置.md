@@ -16,24 +16,24 @@
 
 ## 运行多个Cpp文件,包括头文件
 
-因为使用的使code runner, 默认每次编译单个Cpp文件，所以需要修改一下json配置
+因为使用的使code runner, 默认每次编译单个Cpp文件，所以需要修改一下json配置，编写C文件，就修改 '"${fileDirname}/*.c"'后缀名即可
 **tasks.json**配置
 ``` javascript
 {
+    "version": "2.0.0",
     "tasks": [
         {
-            "type": "cppbuild",
-            "label": "C/C++: g++.exe 生成活动文件",
-            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "type": "shell",
+            "label": "C/C++: g++ build active file",
+            "command": "/usr/bin/g++",
             "args": [
                 "-g",
-                "${fileDirname}\\**.cpp",
-                //"${fileDirname}\\**.h",
+                "${fileDirname}/*.c",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${fileDirname}/${fileBasenameNoExtension}"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "/usr/bin"
             },
             "problemMatcher": [
                 "$gcc"
@@ -41,10 +41,8 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "detail": "调试器生成的任务。"
+            }
         }
-    ],
-    "version": "2.0.0"
+    ]
 }
 ```
