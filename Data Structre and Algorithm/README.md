@@ -36,7 +36,7 @@ A list of data structures and algorithms implemented in Python, including some a
 - [Implementation](https://github.com/lyb1234567/CS_Self_Study/tree/master/Data%20Structre%20and%20Algorithm/Trees/Implementation)
 - [Leetcode](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Trees/Implementation/BST.py)
 ### Tire
-
+- [Implementation](https://github.com/lyb1234567/CS_Self_Study/tree/master/Data%20Structre%20and%20Algorithm/Trie/Implementation)
 ### Heap
 
 ### Hashing
