@@ -15,3 +15,4 @@ This section will show some concepts of heap and give some real implementations 
 | Deletion  | $Olog(n)$       |
 | Search    | $O(n)$          |
 | Sorting   | $nlog(n)$       |
+h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x
