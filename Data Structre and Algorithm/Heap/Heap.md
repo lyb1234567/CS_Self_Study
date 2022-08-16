@@ -11,9 +11,9 @@ This section will show some concepts of heap and give some real implementations 
 ![image](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Heap/image/Min_Heap.PNG?raw=true)
 
 ## Time Complexity
-| Operation | Time complexity |
-| --------- | --------------- |
-| Insertion | $Olog(n)$       |
-| Deletion  | $Olog(n)$       |
-| Search    | $O(n)$          |
-| Sorting   | $nlog(n)$       |
+| Operation | Time complexity                                                          |
+| --------- | ------------------------------------------------------------------------ |
+| Insertion | <img src="https://render.githubusercontent.com/render/math?math=log(n)"> |
+| Deletion  | $Olog(n)$                                                                |
+| Search    | $O(n)$                                                                   |
+| Sorting   | $nlog(n)$                                                                |
