@@ -66,7 +66,7 @@ There are several ways to work around collisions in the list. The three most com
 
 ### Linear Probing
 This strategy suggests that if our hash function returns an index that is already filled, move to the next index. This increment can be based on a fixed **offset value to an already computed index**. If that index is also filled, traverse further until a free spot is found.
-
+![image](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Hashing/image/Linear%20Probing.PNG?raw=true)
 One drawback of using this strategy is that if we don’t pick an **offset** wisely, we can end up back where we started and, hence, miss out on so many possible positions in the list.
 ```python
 def modular(key,size):
@@ -92,7 +92,7 @@ print(list)
 In the chaining strategy, each slot of our hash table holds a pointer to another data structure such as a linked list or a tree. Every entry at that index will be inserted into the linked list for that index.
 
 As you can see, chaining allows us to hash multiple key-value pairs at the same index in constant time (insert at head for linked lists).
-
+![image](https://github.com/lyb1234567/CS_Self_Study/blob/master/Data%20Structre%20and%20Algorithm/Hashing/image/Chaining.PNG?raw=true)
 This strategy greatly increases performance, but it is costly in terms of space.
 
 ### Resizing the List

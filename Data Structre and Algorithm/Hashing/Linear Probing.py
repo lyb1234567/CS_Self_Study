@@ -1,6 +1,5 @@
 def modular(key,size):
     return key%size
-
 list=[None]*20
 key=[2,4,30,42]
 Value=['a','b','c','d','e''f']
